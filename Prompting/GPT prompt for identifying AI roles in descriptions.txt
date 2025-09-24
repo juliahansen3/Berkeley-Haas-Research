@@ -1,0 +1,65 @@
+Root prompt: "Act as a precise classifier for job descriptions on LinkedIn. Follow instructions exacty and 
+do not add extra commentary." 
+
+Core prompt: "You will be given job descriptions in JSON format. 
+We distinguish two categories: 
+A) LLM INTEGRATOR = descriptions of positions that build/operate LLM-powered systems or embed LLMs into workflows. 
+Signals:RAG(retrieval-augmentedgeneration),embeddings/vectorDB(FAISS/Milvus/Pinecone), promptengineeringatsystemlevel, 
+orchestration/agents/LLMOps,LangChain/LlamaIndex,fine-tuning/adapters, model serving/inference, 
+evaluation/guardrails/red-teaming, API integration of LLMs into products or internal processes. 
+B) LLM USER = descriptions of positions that primarily use LLM tools (ChatGPT, Gemini, Copilot, etc.) to perform tasks 
+such as drafting, summarizing, coding assistance, customer responses—without building systems. 
+NOT in-scope for integrator unless integration is explicit: 
+– Foundation-model pretraining/research scientist roles at model labs (OpenAI/DeepMind/etc.). 
+– Generic ML/NLP with no explicit LLM signals. – Pure labeling/annotation. Edge rules: 
+– If both integration and user aspects appear, set role type= "both”. 
+– If acronyms like “RAG” or "AI" appear, assume the LLM meaning unless context contradicts. 
+
+Output a JSON object with "id", "description". and "AI Role" where AI Role → "LLM INTEGRATOR", "LLM USER", or "BOTH" 
+
+Fill one row per entry in the same order as the input JSON object. Only use the descriptions to make the classification. 
+
+Do not add extra keys or commentary outside the JSON object. 
+
+Here are the job descriptions: 
+{{"description":"\u2022\tIdentify and fix over 400 disruptive transportation shipments per day to increase trucking 
+customer\u2019s revenue and Shiplify's efficiency\u2022\tHelped increase from a 93% success rate to 96% success rate 
+over 3 months for the machine learning software which calculates over 300,000 shipments per day"} 
+{"description":"Digital Self-Service Launch: Successfully launched over 90% Straight-Through Processing (STP) menus for 
+self-service, integrating Chat-bot technology across Thailand, Indonesia and Singapore.Operational Efficiency: Achieved 
+a 15% reduction in agent inquiries through increased deflection rate, contributing to improved operational efficiency.
+Strategic Partnerships: Drove strategic partnerships with Fintechs like Avatech.AI, Walkme, Bancassurance fintechs."} 
+{"description":"- Prototyped AI Chatbot and Agents ingested with vector-embedded knowledge base and production feature 
+store using Anthropic Claude and AWS Bedrock.- Built Urgently\u2019s award winning pricing engine 
+(https:\/\/tinyurl.com\/42n7ared), reducing human intervention by 22% and achieving $1.19MM in annual savings.
+- Architected and deployed the company's first ML system for provider-customer matching, processing 50k requests\/day, 
+doubling the match rate, and delivering $2.2MM in annual savings.- Recruited and led a team of data scientists in 
+transforming existing products related to search, pricing, forecasting, and measurement; reported directly to Chief Data 
+Officer."}} "
+
+
+Shorter prompt for less context aware models:
+
+root_prompt = """Act as a precise classifier for LinkedIn job descriptions. Follow instructions 
+exactly and do not add any commentary.""" core_prompt = f""" Below are job descriptions in JSON format. 
+Classify each job description as one of: "LLM INTEGRATOR", "LLM USER", "BOTH", "NONE". 
+- Use only the description text. 
+- Only return the classification for each description, in the same order as the input. 
+- Do not include any explanation, reasoning, or extra text. 
+- Output a JSON object with: "id", "description", and "classification". 
+
+Here are the job descriptions: 
+{{"description":"\u2022\tIdentify and fix over 400 disruptive transportation shipments per day to increase trucking 
+customer\u2019s revenue and Shiplify's efficiency\u2022\tHelped increase from a 93% success rate to 96% success rate 
+over 3 months for the machine learning software which calculates over 300,000 shipments per day"} 
+{"description":"Digital Self-Service Launch: Successfully launched over 90% Straight-Through Processing (STP) menus for 
+self-service, integrating Chat-bot technology across Thailand, Indonesia and Singapore.Operational Efficiency: Achieved 
+a 15% reduction in agent inquiries through increased deflection rate, contributing to improved operational efficiency.
+Strategic Partnerships: Drove strategic partnerships with Fintechs like Avatech.AI, Walkme, Bancassurance fintechs."} 
+{"description":"- Prototyped AI Chatbot and Agents ingested with vector-embedded knowledge base and production feature 
+store using Anthropic Claude and AWS Bedrock.- Built Urgently\u2019s award winning pricing engine 
+(https:\/\/tinyurl.com\/42n7ared), reducing human intervention by 22% and achieving $1.19MM in annual savings.
+- Architected and deployed the company's first ML system for provider-customer matching, processing 50k requests\/day, 
+doubling the match rate, and delivering $2.2MM in annual savings.- Recruited and led a team of data scientists in 
+transforming existing products related to search, pricing, forecasting, and measurement; reported directly to Chief Data 
+Officer."}} """
