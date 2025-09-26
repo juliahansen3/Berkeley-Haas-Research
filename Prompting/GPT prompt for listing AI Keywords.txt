@@ -1,0 +1,5 @@
+Model used: GPT-5 flagship model
+
+“Please create a list of ten keywords that could be used to filter whether an individual is trying to signal AI 
+expertise in their LinkedIn job titles and/or descriptions. The descriptions and titles will be searched by these 
+keywords to signal AI expertise so please make them as accurate and reliable as possible.” 
