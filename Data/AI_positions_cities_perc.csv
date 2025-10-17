@@ -1,0 +1,86 @@
+state,city,AI_cities_22,AI_cities_25
+NM,Albuquerque,0.1353,0.2029
+TX,Arlington,0.2124,0.478
+GA,Atlanta,0.5405,1.1808
+CO,Aurora,0.0923,0.4306
+TX,Austin,0.8398,1.8056
+CA,Bakersfield,0.0645,0.3226
+MD,Baltimore,0.4494,1.1469
+MA,Boston,0.7049,1.4162
+NY,Buffalo,0.2286,0.4143
+AZ,Chandler,0.4878,0.813
+NC,Charlotte,0.3629,0.7471
+IL,Chicago,0.4267,1.0002
+OH,Cincinnati,0.2262,0.4156
+OH,Cleveland,0.1773,0.6452
+CO,Colorado Springs,0.1565,0.2739
+OH,Columbus,0.3372,0.536
+DC,DC,0.2398,0.8793
+TX,Dallas,0.4442,0.9065
+CO,Denver,0.4241,0.9062
+MI,Detroit,0.3174,0.8368
+TX,El Paso,0.0438,0.1315
+IN,Fort Wayne,0.0722,0.1806
+CA,Fremont,0.6765,1.3838
+CA,Fresno,0.0859,0.1719
+TX,Garland,0.2062,0.4124
+AZ,Gilbert,0.3722,0.5583
+AZ,Glendale,0.2392,0.2392
+NC,Greensboro,0.1459,0.4586
+NV,Henderson,0.1057,1.1628
+HI,Honolulu,0.1301,0.488
+TX,Houston,0.2629,0.5714
+AL,Huntsville,0.2058,0.638
+IN,Indianapolis,0.1348,0.4364
+CA,Irvine,0.6255,1.5542
+TX,Irving,0.2133,0.6665
+FL,Jacksonville,0.1233,0.3535
+NJ,Jersey City,0.8202,1.2934
+MO,Kansas City,0.1613,0.4399
+NV,Las vegas,0.1078,0.2617
+KY,Lexington,0.1558,0.3505
+NE,Lincoln,0.3705,0.4863
+CA,Long Beach,0.1357,0.3733
+CA,Los Angeles,0.3767,0.832
+KY,Louisville,0.3237,0.4911
+WI,Madison,0.3523,0.7399
+TN,Memphis,0.1235,0.4234
+AZ,Mesa,0.1285,0.1713
+FL,Miami,0.2671,0.7924
+WI,Milwaukee,0.259,0.5956
+MN,Minneapolis,0.2931,0.863
+TN,Nashville,0.172,0.5923
+LA,New Orleans,0.0844,0.3376
+NY,New York City,0.6217,1.2976
+NJ,Newark,0.0676,0.2931
+VA,Norfolk,0.1373,0.4119
+CA,Oakland,0.4949,1.1383
+OK,Oklahoma City,0.018,0.144
+NE,Omaha,0.1751,0.412
+FL,Orlando,0.2277,0.5124
+PA,Philadelphia,0.4002,0.7475
+AZ,Phoenix,0.2461,0.5049
+PA,Pittsburgh,0.6973,1.2508
+TX,Plano,0.6962,1.0382
+FL,Port St.Lucie,0.2273,0.2273
+OR,Portland,0.4264,0.983
+NC,Raleigh,0.5929,1.2638
+NV,Reno,0.3423,0.7156
+VA,Richmond,0.1905,0.5476
+CA,Riverside,0.1533,0.2555
+CA,Sacramento,0.1003,0.323
+TX,San Antonio,0.119,0.2591
+CA,San Diego,0.6741,1.2524
+CA,San Francisco,1.5999,3.5566
+CA,San Jose,1.2311,2.3929
+AZ,Scottsdale,0.2483,0.7914
+WA,Seattle,1.6679,3.3399
+WA,Spokane,0.0602,0.2107
+MO,St. Louis,0.203,0.6091
+FL,Tampa,0.2128,0.5463
+OH,Toledo,0.1131,0.1885
+AZ,Tucson,0.336,0.672
+OK,Tulsa,0.0203,0.2437
+VA,Virginia Beach,0.0697,0.1395
+KS,Wichita,0.1548,0.1548
+NC,Winston-Salem,0.0806,0.282
